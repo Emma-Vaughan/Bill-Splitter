@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./JSProject.css" type="text/css" />
+    <script type="text/javascript" src="./JSProject.js"></script>
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width initial-scale=1,
+    minimum-scale=1"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div>
+        <h1>What Do I Owe?</h1>
+      </div>
+      <div class="total">
+        <div class="poundsign">
+          <p>£</p>
+        </div>
+        <form>
+          <input type="number" id="enteramount" name="amountofbill" />
+        </form>
+      </div>
+      <div class="people">
+        <i class="fa fa-users fa-2x" aria-hidden="true"></i>
+        <form>
+          <input type="number" id="numberofpeople" name="amountofpeople" />
+        </form>
+      </div>
+      <div class="calculate">
+        <button type="button" onclick="calculate()">Calculate!</button>
+      </div>
+      <div class="eachowe">
+        <i class="fa fa-credit-card fa-2x" aria-hidden="true"></i>
+        <div class="result">
+          <p id="finalamount">Result here</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
