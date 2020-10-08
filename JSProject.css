@@ -80,10 +80,11 @@ h1 {
 }
 
 .result {
-  font-size: 1.8em;
+  font-size: 1.2em;
   font-family: "Open Sans Condensed", sans-serif;
   color: #0b3765;
   text-align: center;
+  padding: 0 3% 0 3%;
 }
 
 button {
@@ -94,9 +95,13 @@ button {
   display: flex;
   align-content: center;
   margin: 0 auto;
+  display: block;
+  font-size: 1.2em;
 }
 
-@media (max-width: 375px) {
+}
+
+@media (max-width: 375px) {  
   .main {
     width: 100%;
   }
