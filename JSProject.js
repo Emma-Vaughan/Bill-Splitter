@@ -14,14 +14,21 @@ calculate = function () {
     document.getElementById("finalamount").innerHTML =
       "Please enter a valid monetary amount";
   } else {
-    const people = document.getElementById("numberofpeople").value;
-    if (people < 1) {
+    const tipping = document.getElementById("tipform").value;
+    if (isThisMoney(tipping) !== true) {
       document.getElementById("finalamount").innerHTML =
-        "At least 1 person must be paying, dickhead!";
+        "Please enter a valid monetary amount";
     } else {
-      const result = parseInt(amount) / parseInt(people);
-      const display = "£" + result.toFixed(2) + " p.p.";
-      document.getElementById("finalamount").innerHTML = display;
+      const people = document.getElementById("numberofpeople").value;
+      if (people < 1) {
+        document.getElementById("finalamount").innerHTML =
+          "At least 1 person must be paying, dickhead!";
+      } else {
+        const totalamount = parseInt(amount) + parseInt(tipping);
+        const result = parseInt(totalamount) / parseInt(people);
+        const display = "£" + result.toFixed(2) + " p.p.";
+        document.getElementById("finalamount").innerHTML = display;
+      }
     }
   }
 };
