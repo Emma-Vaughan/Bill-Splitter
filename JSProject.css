@@ -88,6 +88,19 @@ h1 {
   text-align: center;
 }
 
+.tickbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 0 4% 0;
+  font-size: 0.8em;
+}
+
+#onelesstopay {
+  margin-right: 4%;
+}
+
 .eachowe {
   width: 70%;
   display: flex;

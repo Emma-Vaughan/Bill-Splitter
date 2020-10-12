@@ -1,11 +1,11 @@
 function isThisMoney(amount) {
   const pennies = amount * 100;
   const roundUp = Number.isInteger(pennies);
-  console.log(roundUp);
   return roundUp;
 }
 
 calculate = function () {
+  const cb = document.getElementById("onelesstopay").checked;
   const amount = document.getElementById("enteramount").value;
   if (amount < 0) {
     document.getElementById("finalamount").innerHTML =
@@ -23,12 +23,12 @@ calculate = function () {
       if (people < 1) {
         document.getElementById("finalamount").innerHTML =
           "At least 1 person must be paying, dickhead!";
-      } else {
-        const totalamount = parseInt(amount) + parseInt(tipping);
-        const result = parseInt(totalamount) / parseInt(people);
-        const display = "£" + result.toFixed(2) + " p.p.";
-        document.getElementById("finalamount").innerHTML = display;
       }
+      const newPeople = cb == true ? parseInt(people) - 1 : parseInt(people);
+      const totalamount = parseInt(amount) + parseInt(tipping);
+      const result = parseInt(totalamount) / parseInt(newPeople);
+      const display = "£" + result.toFixed(2) + " p.p.";
+      document.getElementById("finalamount").innerHTML = display;
     }
   }
 };
